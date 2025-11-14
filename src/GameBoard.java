@@ -33,7 +33,7 @@ class GameBoard extends JFrame implements ActionListener {
         southPanel.add(nyttSpel);
         southPanel.add(ezWin);
 
-
+        //for loop som skapar en ny knapp och sparar den i en array,sätter font och kopplar till actionlistener
         for (int i = 0; i < 15; i++) {
             buttons[i] = new JButton();
             buttons[i].setFont(new Font("Times New Roman", Font.BOLD, 20));
@@ -43,7 +43,7 @@ class GameBoard extends JFrame implements ActionListener {
         empty.setOpaque(true);
         empty.setBackground(Color.lightGray);
         brickPanel.add(empty);
-        nyttSpel.addActionListener(e ->{brick.resetRandom();
+        nyttSpel.addActionListener(e ->{brick.resetRandom(); //lambda
             updateBoard();});
         ezWin.addActionListener(e->{brick.lättVinst();
             updateBoard();});
