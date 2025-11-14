@@ -55,7 +55,7 @@ class GameBoard extends JFrame implements ActionListener {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     }
-
+    //resnar panelen, loopar, lägger till tomma och numerade brickor
     private void updateBoard(){
         brickPanel.removeAll();
         int buttonIndex=0;
@@ -71,6 +71,7 @@ class GameBoard extends JFrame implements ActionListener {
                 buttonIndex++;
             }
         }
+        //updaterar GUI:t
         brickPanel.revalidate();
         brickPanel.repaint();
     }
