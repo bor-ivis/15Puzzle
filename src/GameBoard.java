@@ -48,7 +48,6 @@ class GameBoard extends JFrame implements ActionListener {
         ezWin.addActionListener(e->{brick.lättVinst();
             updateBoard();});
 
-
         updateBoard();
         setSize(600,600);
         setVisible(true);
