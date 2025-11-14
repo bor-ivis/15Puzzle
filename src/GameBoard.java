@@ -10,6 +10,7 @@ class GameBoard extends JFrame implements ActionListener {
     JPanel brickPanel = new JPanel();
     JPanel southPanel = new JPanel();
 
+
     JLabel l = new JLabel("15-PUZZLE GAME BOARD");
     JLabel empty = new JLabel("");
 
@@ -18,9 +19,10 @@ class GameBoard extends JFrame implements ActionListener {
     JButton ezWin = new JButton("Lätt vinst knapp!");
 
     public GameBoard() {
+
         setTitle("Femtonspel");
-        l.setFont(new Font("Serif", Font.BOLD, 40));
-        l.setForeground(Color.RED);
+        l.setFont(new Font("Calibri", Font.ITALIC, 50));
+        l.setForeground(Color.DARK_GRAY);
 
         this.add(gameBoard);
         gameBoard.setLayout(new BorderLayout());
@@ -32,7 +34,6 @@ class GameBoard extends JFrame implements ActionListener {
         northPanel.add(l);
         southPanel.add(nyttSpel);
         southPanel.add(ezWin);
-
 
         for (int i = 0; i < 15; i++) {
             buttons[i] = new JButton();
@@ -47,7 +48,6 @@ class GameBoard extends JFrame implements ActionListener {
             updateBoard();});
         ezWin.addActionListener(e->{brick.lättVinst();
             updateBoard();});
-
 
         updateBoard();
         setSize(600,600);
